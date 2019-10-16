@@ -1,0 +1,22 @@
+{
+  "name": "ebay_product_page",
+  "version": "1.0.0",
+  "description": "Copy of an eBay Product Page",
+  "author": "Matt Raetz",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+  }
+}
