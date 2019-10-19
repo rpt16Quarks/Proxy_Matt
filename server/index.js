@@ -19,11 +19,19 @@ app.use('/reviews', proxy('http://localhost:3004', {
   }
 }));
 
-app.use('/description/:id', proxy('http://localhost:3005', {
+app.use('/description', proxy('http://localhost:3002', {
   proxyReqPathResolver: function (req) {
     var path = req.url.split('/')[1];
     console.log(`/description${path}`);
     return `/description${path}`;
+  }
+}));
+
+app.use('/suggested', proxy('http://localhost:3001', {
+  proxyReqPathResolver: function (req) {
+    var path = req.url.split('/')[1];
+    console.log(`/suggested${path}`);
+    return `/suggested${path}`;
   }
 }));
 
