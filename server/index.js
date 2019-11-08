@@ -19,6 +19,13 @@ app.use('/reviews', proxy('http://3.17.191.227:3004/', {
   }
 }));
 
+app.use('/ratings', proxy('http://3.17.191.227:3004/', {
+  proxyReqPathResolver: function (req) {
+    var path = req.url.split('/')[1];
+    return `/ratings${path}`;
+  }
+}));
+
 app.use('/description', proxy('http://ec2-54-173-118-85.compute-1.amazonaws.com', {
   proxyReqPathResolver: function (req) {
     var path = req.url.split('/')[1];
